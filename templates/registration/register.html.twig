@@ -1,0 +1,201 @@
+{% extends './template.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block stylesheets %}
+    {#    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.css"> #}
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row my-4">
+            <div class="col-md-8 mx-auto">
+                <div class="card shadow shadow-lg mb-5">
+                    <div class="card-header">
+                        <h1 class="text-center">Inscription</h1>
+                    </div>
+                    <div class="card-body px-5 py-4">
+
+                        {% for flash_error in app.flashes('verify_email_error') %}
+                            <div class="alert alert-danger" role="alert">{{ flash_error }}</div>
+                        {% endfor %}
+
+                        {{ form_start(registrationForm) }}
+
+                        <div class="form-row mb-2">
+                            <div class="col form-group">
+                                {{ form_label(registrationForm.lastName) }}
+                                {{ form_widget(registrationForm.lastName, {'attr': {'class': 'form-control'}}) }}
+                                <span class="text-danger">
+                                        {{ form_errors(registrationForm.lastName) }}
+                                    </span>
+                            </div>
+
+                            <div class="col form-group">
+                                {{ form_label(registrationForm.firstName) }}
+                                {{ form_widget(registrationForm.firstName, {'attr': {'class': 'form-control'}}) }}
+                                <span class="text-danger">
+                                        {{ form_errors(registrationForm.firstName) }}
+                                    </span>
+                            </div>
+                        </div>
+
+                        <div class="form-row mb-2">
+                            <div class="form-group col">
+                                {{ form_label(registrationForm.birthDate) }}
+                                {{ form_widget(registrationForm.birthDate) }}
+                                <span class="text-danger">
+                                    {{ form_errors(registrationForm.birthDate) }}
+                                </span>
+                            </div>
+
+                            <div class="form-group col">
+                                {{ form_label(registrationForm.phoneNumber) }}
+                                {{ form_widget(registrationForm.phoneNumber) }}
+                                <span class="text-danger">
+                                    {{ form_errors(registrationForm.phoneNumber) }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            {{ form_label(registrationForm.status) }}
+                            {{ form_widget(registrationForm.status) }}
+                            <span class="text-danger">
+                                {{ form_errors(registrationForm.status) }}
+                            </span>
+                        </div>
+
+                        <div id="professionnel">
+                            <div class="form-group mb-2">
+                                {{ form_label(registrationForm.siret) }}
+                                {{ form_widget(registrationForm.siret, {'attr': {'class': 'form-control'}}) }}
+                                <span class="text-danger">
+                                    {{ form_errors(registrationForm.siret) }}
+                                </span>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                {{ form_label(registrationForm.companyName) }}
+                                {{ form_widget(registrationForm.companyName, {'attr': {'class': 'form-control'}}) }}
+                                <span class="text-danger">
+                                    {{ form_errors(registrationForm.companyName) }}
+                                </span>
+                            </div>
+
+                            <div class="form-group mb-2">
+                                {{ form_label(registrationForm.legalStatus) }}
+                                {{ form_widget(registrationForm.legalStatus, {'attr': {'class': 'form-control'}}) }}
+                                <span class="text-danger">
+                                    {{ form_errors(registrationForm.legalStatus) }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-2">
+                            {{ form_label(registrationForm.address) }}
+                            {{ form_widget(registrationForm.address, {'attr': {'class': 'form-control'}}) }}
+                            <span class="text-danger">
+                                {{ form_errors(registrationForm.address) }}
+                            </span>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            {{ form_label(registrationForm.email) }}
+                            {{ form_widget(registrationForm.email, {'attr': {'class': 'form-control'}}) }}
+                            <span class="text-danger">
+                                {{ form_errors(registrationForm.email) }}
+                            </span>
+                        </div>
+
+
+                        <div class="form-group mb-2">
+                            {{ form_label(registrationForm.plainPassword) }}
+                            {{ form_widget(registrationForm.plainPassword, {'attr': {'class': 'form-control'}}) }}
+                            <span class="text-danger">
+                                {{ form_errors(registrationForm.plainPassword) }}
+                            </span>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            {{ form_widget(registrationForm.agreeTerms, {'attr': {'class': 'form-check-input'}}) }}
+                            <label class="form-check-label" for="defaultCheck1">
+                                Accepter les conditions d'utilisation
+                            </label>
+                        </div>
+
+
+                        <div class="form-group mb-2 d-none">
+                            {{ form_label(registrationForm.legalStatus) }}
+                            {{ form_widget(registrationForm.legalStatus, {'attr': {'class': 'form-control'}}) }}
+                            <span class="text-danger">
+                                {{ form_errors(registrationForm.legalStatus) }}
+                            </span>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-block">S'inscrire</button>
+
+
+                        {{ form_end(registrationForm) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script>
+
+        function handleRequiredFields(value){
+            $('#registration_form_siret').attr('required', value);
+            $('#registration_form_companyName').attr('required', value);
+            $('#registration_form_legalStatus').attr('required', value);
+        }
+
+        $(document).ready(function () {
+            let status = $('#registration_form_status').val();
+
+            if ( status === 'professionnel') {
+                $('#professionnel').show();
+                handleRequiredFields(true);
+            } else {
+                handleRequiredFields(false);
+                $('#professionnel').hide();
+            }
+
+            $('#registration_form_status').change(function () {
+                if ($(this).val() === 'professionnel') {
+                    $('#professionnel').show();
+                    handleRequiredFields(true);
+                } else {
+                    handleRequiredFields(false);
+                    $('#professionnel').hide();
+                }
+            });
+        });
+    </script>
+    {#    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script> #}
+    {#    <script> #}
+    {#        jQuery(document).ready(function() { #}
+    {#            $('.js-datepicker').datepicker(); #}
+    {#        }); #}
+    {#    </script> #}
+    {#    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.js"></script> #}
+    {#    <script> #}
+    {#        $(document).ready(function() { #}
+    {#            $('#registration_form_birthDate').datepicker({ #}
+    {#                format: 'dd/mm/yyyy', #}
+    {#                language: 'fr', #}
+    {#                autoclose: true, #}
+    {#                todayHighlight: true, #}
+    {#                startDate: '-100y', #}
+    {#                endDate: '-18y' #}
+    {#            }); #}
+    {#        }); #}
+    {#    </script> #}
+{% endblock %}

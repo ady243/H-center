@@ -1,0 +1,51 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="row col-md-12 mt-5 mx-auto">
+            <h1>Desktop index</h1>
+
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Surface</th>
+                    <th>Capacity</th>
+                    <th>Price</th>
+                    <th>DateStart</th>
+                    <th>DateEnd</th>
+                    <th>actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for desktop in desktops %}
+                    <tr>
+                        <td>{{ desktop.id }}</td>
+                        <td>{{ desktop.name }}</td>
+                        <td>{{ desktop.type }}</td>
+                        <td>{{ desktop.surface }}</td>
+                        <td>{{ desktop.capacity }}</td>
+                        <td>{{ desktop.price }}</td>
+                        <td>{{ desktop.dateStart ? desktop.dateStart|date('Y-m-d') : '' }}</td>
+                        <td>{{ desktop.dateEnd ? desktop.dateEnd|date('Y-m-d') : '' }}</td>
+                        <td>
+                            <a href="{{ path('app_desktop_show', {'id': desktop.id}) }}">show</a>
+                            <a href="{{ path('app_desktop_edit', {'id': desktop.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="9">no records found</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+
+            <a href="{{ path('app_desktop_new') }}">Create new</a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends './template.html.twig' %}
+
+{% block title %}Page d'accueil{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+
+    <div class="container pt-5">
+
+        <div class="row mt-4">
+            {% for desktop in desktops %}
+
+                <div class="col-md-4">
+                    <div class="card shadow">
+                        <div class="card-title p-3 text-center">
+                            <h3>{{ desktop.name }}</h3>
+                        </div>
+                        <div class="card-body p-3 text-center">
+                            <h4> {{  desktop.price }} €/mois</h4>
+                            {{ desktop.surface }} m²
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+{#        <div class="card card-body mt-4 shadow">#}
+
+{#        {% if is_granted('IS_AUTHENTICATED_FULLY') %}#}
+{#            <h2 class="h2 text-center">Bienvenue {{ app.user.username }}</h2>#}
+{#        {% endif %}#}
+
+{#        {% if app.user %}#}
+{#            <div class="mb-3">#}
+{#                You are logged in as {{ app.user.username }},#}
+{#                <a href="{{ path('app_logout') }}">Logout</a>#}
+{#            </div>#}
+{#        {% else %}#}
+{#            <div class="mb-3">#}
+{#                You are not logged in, <a href="/login">Login</a> or <a href="/register">Register</a>#}
+{#            </div>#}
+{#        {% endif %}#}
+{#        </div>#}
+
+    </div>
+{% endblock %}

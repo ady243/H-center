@@ -1,0 +1,15 @@
+{% extends 'template.html.twig' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 mt-4">
+                <h1>Create new Desktop</h1>
+
+                {{ include('desktop/_form.html.twig') }}
+
+                <a href="{{ path('app_desktop_index') }}">back to list</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
