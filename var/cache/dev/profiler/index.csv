@@ -1,0 +1,9 @@
+38091c,::1,GET,http://localhost:8000/,1668360255,d5925f,500
+d5925f,::1,GET,http://localhost:8000/,1668360256,,500
+50b0af,::1,GET,http://localhost:8000/,1668360292,,200
+d43252,::1,GET,http://localhost:8000/favicon.ico,1668360293,e503b2,404
+e503b2,::1,GET,http://localhost:8000/favicon.ico,1668360293,,404
+161357,::1,GET,http://localhost:8000/login,1668360295,,200
+170fab,::1,GET,http://localhost:8000/register,1668360297,31d02e,500
+31d02e,::1,GET,http://localhost:8000/register,1668360297,,500
+4ab374,::1,GET,http://localhost:8000/register,1668360356,,200
