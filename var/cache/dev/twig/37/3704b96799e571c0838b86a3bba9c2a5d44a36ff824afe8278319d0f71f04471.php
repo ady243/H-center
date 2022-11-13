@@ -88,7 +88,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         // line 6
         echo "    <style>
         body{
-            background-color: #f5f5f5;
+            background-color:  #fff0e6;
         }
     </style>
 ";
@@ -112,7 +112,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
         // line 15
         echo "
-    <div class=\"container pt-5\">
+    <div class=\"container\">
 
         <div class=\"row mt-4\">
             ";
@@ -122,23 +122,32 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         foreach ($context['_seq'] as $context["_key"] => $context["desktop"]) {
             // line 20
             echo "
-                <div class=\"col-md-4\">
+                <div class=\"col-md-4 pt-50 me-5\">
                     <div class=\"card shadow\">
+                    
                         <div class=\"card-title p-3 text-center\">
                             <h3>";
-            // line 24
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "name", [], "any", false, false, false, 24), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "name", [], "any", false, false, false, 25), "html", null, true);
             echo "</h3>
                         </div>
                         <div class=\"card-body p-3 text-center\">
                             <h4> ";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 27), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 28), "html", null, true);
             echo " €/mois</h4>
                             ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 28), "html", null, true);
-            echo " m²
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 29), "html", null, true);
+            echo " m² : 
+                            ";
+            // line 30
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateStart", [], "any", false, false, false, 30), "d/m/Y"), "html", null, true);
+            echo " au 
+                            ";
+            // line 31
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
+            echo "
                         </div>
                     </div>
                 </div>
@@ -148,17 +157,17 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['desktop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 34
+        // line 37
         echo "        </div>
 
 ";
-        // line 37
+        // line 40
         echo "
 ";
-        // line 41
+        // line 44
         echo "
 ";
-        // line 53
+        // line 56
         echo "
     </div>
 ";
@@ -182,7 +191,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
     public function getDebugInfo()
     {
-        return array (  162 => 53,  159 => 41,  156 => 37,  152 => 34,  140 => 28,  136 => 27,  130 => 24,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  171 => 56,  168 => 44,  165 => 40,  161 => 37,  149 => 31,  145 => 30,  141 => 29,  137 => 28,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -194,7 +203,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 {% block stylesheets %}
     <style>
         body{
-            background-color: #f5f5f5;
+            background-color:  #fff0e6;
         }
     </style>
 {% endblock %}
@@ -202,19 +211,22 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
 {% block body %}
 
-    <div class=\"container pt-5\">
+    <div class=\"container\">
 
         <div class=\"row mt-4\">
             {% for desktop in desktops %}
 
-                <div class=\"col-md-4\">
+                <div class=\"col-md-4 pt-50 me-5\">
                     <div class=\"card shadow\">
+                    
                         <div class=\"card-title p-3 text-center\">
                             <h3>{{ desktop.name }}</h3>
                         </div>
                         <div class=\"card-body p-3 text-center\">
                             <h4> {{  desktop.price }} €/mois</h4>
-                            {{ desktop.surface }} m²
+                            {{ desktop.surface }} m² : 
+                            {{desktop.dateStart | date ('d/m/Y')}} au 
+                            {{desktop.dateEnd | date('d/m/Y')}}
                         </div>
                     </div>
                 </div>

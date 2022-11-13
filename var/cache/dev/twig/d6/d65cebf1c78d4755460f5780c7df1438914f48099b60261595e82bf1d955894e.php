@@ -360,7 +360,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                             </span>
                         </div>
 
-                        <button type=\"submit\" class=\"btn btn-success btn-block\">S'inscrire</button>
+                        <button type=\"submit\" class=\"btn btn-warning btn-block\">S'inscrire</button>
 
 
                         ";
@@ -622,7 +622,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                             </span>
                         </div>
 
-                        <button type=\"submit\" class=\"btn btn-success btn-block\">S'inscrire</button>
+                        <button type=\"submit\" class=\"btn btn-warning btn-block\">S'inscrire</button>
 
 
                         {{ form_end(registrationForm) }}
