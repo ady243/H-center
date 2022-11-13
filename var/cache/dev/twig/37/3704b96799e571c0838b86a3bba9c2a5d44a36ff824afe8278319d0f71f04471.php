@@ -160,15 +160,8 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         // line 37
         echo "        </div>
 
-";
-        // line 40
-        echo "
-";
-        // line 44
-        echo "
-";
-        // line 56
-        echo "
+
+
     </div>
 ";
         
@@ -191,7 +184,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
     public function getDebugInfo()
     {
-        return array (  171 => 56,  168 => 44,  165 => 40,  161 => 37,  149 => 31,  145 => 30,  141 => 29,  137 => 28,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  161 => 37,  149 => 31,  145 => 30,  141 => 29,  137 => 28,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -234,23 +227,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
             {% endfor %}
         </div>
 
-{#        <div class=\"card card-body mt-4 shadow\">#}
 
-{#        {% if is_granted('IS_AUTHENTICATED_FULLY') %}#}
-{#            <h2 class=\"h2 text-center\">Bienvenue {{ app.user.username }}</h2>#}
-{#        {% endif %}#}
-
-{#        {% if app.user %}#}
-{#            <div class=\"mb-3\">#}
-{#                You are logged in as {{ app.user.username }},#}
-{#                <a href=\"{{ path('app_logout') }}\">Logout</a>#}
-{#            </div>#}
-{#        {% else %}#}
-{#            <div class=\"mb-3\">#}
-{#                You are not logged in, <a href=\"/login\">Login</a> or <a href=\"/register\">Register</a>#}
-{#            </div>#}
-{#        {% endif %}#}
-{#        </div>#}
 
     </div>
 {% endblock %}

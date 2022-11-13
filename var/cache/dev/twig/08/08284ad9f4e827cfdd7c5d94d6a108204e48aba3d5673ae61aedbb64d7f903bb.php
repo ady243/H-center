@@ -65,10 +65,10 @@ class __TwigTemplate_26e4894a6a2842abf50de3d801f18d82df3d43900302677c5fe264fd792
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <div class=\"container\">
+        echo "    <div class=\"container m-30\">
         <div class=\"row\">
-            <div class=\"col-md-9 mt-4\">
-                <h1>Create new Desktop</h1>
+            <div class=\"col-md-9 mt-4 p-4\">
+                <h1>créer un nouveau bureau</h1>
 
                 ";
         // line 9
@@ -78,7 +78,7 @@ class __TwigTemplate_26e4894a6a2842abf50de3d801f18d82df3d43900302677c5fe264fd792
                 <a href=\"";
         // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_index");
-        echo "\">back to list</a>
+        echo " \" class=\"text-danger\"> <=back to list</a>
             </div>
         </div>
     </div>
@@ -111,14 +111,14 @@ class __TwigTemplate_26e4894a6a2842abf50de3d801f18d82df3d43900302677c5fe264fd792
         return new Source("{% extends 'template.html.twig' %}
 
 {% block body %}
-    <div class=\"container\">
+    <div class=\"container m-30\">
         <div class=\"row\">
-            <div class=\"col-md-9 mt-4\">
-                <h1>Create new Desktop</h1>
+            <div class=\"col-md-9 mt-4 p-4\">
+                <h1>créer un nouveau bureau</h1>
 
                 {{ include('desktop/_form.html.twig') }}
 
-                <a href=\"{{ path('app_desktop_index') }}\">back to list</a>
+                <a href=\"{{ path('app_desktop_index') }} \" class=\"text-danger\"> <=back to list</a>
             </div>
         </div>
     </div>

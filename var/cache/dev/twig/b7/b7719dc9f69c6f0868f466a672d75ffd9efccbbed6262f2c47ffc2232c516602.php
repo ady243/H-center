@@ -56,39 +56,38 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12)) {
             // line 13
             echo "
-
                     <p class=\"text-success\">";
-            // line 15
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "username", [], "any", false, false, false, 15), "html", null, true);
-            echo " - ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "status", [], "any", false, false, false, 15), "html", null, true);
+            // line 14
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14), "username", [], "any", false, false, false, 14), "html", null, true);
+            echo " : ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14), "status", [], "any", false, false, false, 14), "html", null, true);
             echo "</p>
                     ";
-            // line 16
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", [], "any", false, false, false, 16), "status", [], "any", false, false, false, 16), "professionnel"))) {
-                // line 17
+            // line 15
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "status", [], "any", false, false, false, 15), "professionnel"))) {
+                // line 16
                 echo "                        <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_new");
                 echo "\" class=\"btn btn-outline-light justify-content-lg-end\">Ajouter</a>
                     ";
             }
-            // line 19
+            // line 18
             echo "                    <a class=\"btn btn-danger -m-5\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
                 ";
         } else {
-            // line 21
+            // line 20
             echo "                    <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\" class=\"btn btn-outline-light p-1  justify-content-lg-end\">Login</a>
                     <a href=\"";
-            // line 22
+            // line 21
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\" class=\"btn btn-danger p-1 justify-content-lg-end\">Sign-up</a>
                 ";
         }
-        // line 24
+        // line 23
         echo "            <div/>
                
             </div>
@@ -115,7 +114,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     public function getDebugInfo()
     {
-        return array (  92 => 24,  87 => 22,  82 => 21,  76 => 19,  70 => 17,  68 => 16,  62 => 15,  58 => 13,  56 => 12,  43 => 1,);
+        return array (  91 => 23,  86 => 21,  81 => 20,  75 => 18,  69 => 16,  67 => 15,  61 => 14,  58 => 13,  56 => 12,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -133,8 +132,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
             <div class=\"d-flex  pt-10 p-2 justify-content-lg-end\">
              {% if app.user %}
 
-
-                    <p class=\"text-success\">{{ app.user.username }} - {{ app.user.status }}</p>
+                    <p class=\"text-success\">{{ app.user.username }} : {{ app.user.status }}</p>
                     {% if app.user.status == 'professionnel' %}
                         <a href=\"{{ path('app_desktop_new') }}\" class=\"btn btn-outline-light justify-content-lg-end\">Ajouter</a>
                     {% endif %}

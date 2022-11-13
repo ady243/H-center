@@ -11,8 +11,7 @@
             <div class="d-flex  pt-10 p-2 justify-content-lg-end">
              {% if app.user %}
 
-
-                    <p class="text-success">{{ app.user.username }} - {{ app.user.status }}</p>
+                    <p class="text-success">{{ app.user.username }} : {{ app.user.status }}</p>
                     {% if app.user.status == 'professionnel' %}
                         <a href="{{ path('app_desktop_new') }}" class="btn btn-outline-light justify-content-lg-end">Ajouter</a>
                     {% endif %}
