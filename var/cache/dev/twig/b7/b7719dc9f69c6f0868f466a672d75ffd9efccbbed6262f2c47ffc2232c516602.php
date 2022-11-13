@@ -46,7 +46,10 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
        
        
             <form class=\"col-24 col-lg-auto mb-5 mb-lg-1 me-lg-5 justify-content-lg-end d-flex \">
-                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search...\" aria-label=\"Search\">
+                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search... ";
+        // line 7
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["desktop"]) || array_key_exists("desktop", $context) ? $context["desktop"] : (function () { throw new RuntimeError('Variable "desktop" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
+        echo "\" aria-label=\"Search\">
             </form>
 
             <div class=\"\">
@@ -114,7 +117,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     public function getDebugInfo()
     {
-        return array (  91 => 23,  86 => 21,  81 => 20,  75 => 18,  69 => 16,  67 => 15,  61 => 14,  58 => 13,  56 => 12,  43 => 1,);
+        return array (  94 => 23,  89 => 21,  84 => 20,  78 => 18,  72 => 16,  70 => 15,  64 => 14,  61 => 13,  59 => 12,  51 => 7,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -125,7 +128,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
        
        
             <form class=\"col-24 col-lg-auto mb-5 mb-lg-1 me-lg-5 justify-content-lg-end d-flex \">
-                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search...\" aria-label=\"Search\">
+                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search... {{desktop.name}}\" aria-label=\"Search\">
             </form>
 
             <div class=\"\">

@@ -131,23 +131,28 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "name", [], "any", false, false, false, 25), "html", null, true);
             echo "</h3>
                         </div>
+                        ";
+            // line 27
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "image", [], "any", false, false, false, 27), "html", null, true);
+            echo "
                         <div class=\"card-body p-3 text-center\">
                             <h4> ";
-            // line 28
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 28), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 29), "html", null, true);
             echo " €/mois</h4>
                             ";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 29), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 30), "html", null, true);
             echo " m² : 
                             ";
-            // line 30
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateStart", [], "any", false, false, false, 30), "d/m/Y"), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateStart", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
             echo " au 
                             ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
+            // line 32
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 32), "d/m/Y"), "html", null, true);
             echo "
+                            
                         </div>
                     </div>
                 </div>
@@ -157,7 +162,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['desktop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 37
+        // line 39
         echo "        </div>
 
 
@@ -184,7 +189,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
     public function getDebugInfo()
     {
-        return array (  161 => 37,  149 => 31,  145 => 30,  141 => 29,  137 => 28,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  166 => 39,  153 => 32,  149 => 31,  145 => 30,  141 => 29,  136 => 27,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -215,11 +220,13 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
                         <div class=\"card-title p-3 text-center\">
                             <h3>{{ desktop.name }}</h3>
                         </div>
+                        {{desktop.image}}
                         <div class=\"card-body p-3 text-center\">
                             <h4> {{  desktop.price }} €/mois</h4>
                             {{ desktop.surface }} m² : 
                             {{desktop.dateStart | date ('d/m/Y')}} au 
                             {{desktop.dateEnd | date('d/m/Y')}}
+                            
                         </div>
                     </div>
                 </div>
