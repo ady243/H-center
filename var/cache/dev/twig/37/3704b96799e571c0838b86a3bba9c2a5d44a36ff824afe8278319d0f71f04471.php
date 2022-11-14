@@ -114,7 +114,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         echo "
     <div class=\"container\">
 
-        <div class=\"row mt-4\">
+        <div class=\"row mt-4 p-1 pt-4 col-xxl-1\">
             ";
         // line 19
         $context['_parent'] = $context;
@@ -122,7 +122,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         foreach ($context['_seq'] as $context["_key"] => $context["desktop"]) {
             // line 20
             echo "
-                <div class=\"col-md-4 pt-50 me-5\">
+                <div class=\"row p-4 col-4 pt-50 me-5\">
                     <div class=\"card shadow\">
                     
                         <div class=\"card-title p-3 text-center\">
@@ -211,10 +211,10 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
     <div class=\"container\">
 
-        <div class=\"row mt-4\">
+        <div class=\"row mt-4 p-1 pt-4 col-xxl-1\">
             {% for desktop in desktops %}
 
-                <div class=\"col-md-4 pt-50 me-5\">
+                <div class=\"row p-4 col-4 pt-50 me-5\">
                     <div class=\"card shadow\">
                     
                         <div class=\"card-title p-3 text-center\">

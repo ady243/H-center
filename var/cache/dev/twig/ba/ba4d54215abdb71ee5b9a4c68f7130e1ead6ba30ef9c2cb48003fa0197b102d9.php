@@ -126,11 +126,11 @@ class __TwigTemplate_c83ea1bdf251c0557f8738c71544a4eaa5eea3e7e5637e8a08ff7d6b46a
             ((twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 33)) ? (print (twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 33), "Y-m-d"), "html", null, true))) : (print ("")));
             echo "</td>
                         <td>
-                            <a href=\"";
+                            <a class=\"btn btn-warning\" href=\"";
             // line 35
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_show", ["id" => twig_get_attribute($this->env, $this->source, $context["desktop"], "id", [], "any", false, false, false, 35)]), "html", null, true);
             echo "\">show</a>
-                            <a href=\"";
+                            <a class=\"btn vtn-warning\"href=\"";
             // line 36
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["desktop"], "id", [], "any", false, false, false, 36)]), "html", null, true);
             echo "\">edit</a>
@@ -220,8 +220,8 @@ class __TwigTemplate_c83ea1bdf251c0557f8738c71544a4eaa5eea3e7e5637e8a08ff7d6b46a
                         <td>{{ desktop.dateStart ? desktop.dateStart|date('Y-m-d') : '' }}</td>
                         <td>{{ desktop.dateEnd ? desktop.dateEnd|date('Y-m-d') : '' }}</td>
                         <td>
-                            <a href=\"{{ path('app_desktop_show', {'id': desktop.id}) }}\">show</a>
-                            <a href=\"{{ path('app_desktop_edit', {'id': desktop.id}) }}\">edit</a>
+                            <a class=\"btn btn-warning\" href=\"{{ path('app_desktop_show', {'id': desktop.id}) }}\">show</a>
+                            <a class=\"btn vtn-warning\"href=\"{{ path('app_desktop_edit', {'id': desktop.id}) }}\">edit</a>
                         </td>
                     </tr>
                 {% else %}

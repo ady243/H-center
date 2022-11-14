@@ -32,8 +32,8 @@
                         <td>{{ desktop.dateStart ? desktop.dateStart|date('Y-m-d') : '' }}</td>
                         <td>{{ desktop.dateEnd ? desktop.dateEnd|date('Y-m-d') : '' }}</td>
                         <td>
-                            <a href="{{ path('app_desktop_show', {'id': desktop.id}) }}">show</a>
-                            <a href="{{ path('app_desktop_edit', {'id': desktop.id}) }}">edit</a>
+                            <a class="btn btn-warning" href="{{ path('app_desktop_show', {'id': desktop.id}) }}">show</a>
+                            <a class="btn vtn-warning"href="{{ path('app_desktop_edit', {'id': desktop.id}) }}">edit</a>
                         </td>
                     </tr>
                 {% else %}

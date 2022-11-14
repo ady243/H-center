@@ -27,6 +27,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         $this->parent = false;
 
         $this->blocks = [
+            'stylsheets' => [$this, 'block_stylsheets'],
         ];
     }
 
@@ -40,58 +41,101 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "layouts/header.html.twig"));
 
         // line 1
-        echo "<header class=\"pt-1 bg-warning text-white d-flex\">
-    <div class=\"container \">
-        <div class=\"d-flex flex-wrap align-items-center col\">
-       
-       
-            <form class=\"col-24 col-lg-auto mb-5 mb-lg-1 me-lg-5 justify-content-lg-end d-flex \">
-                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search... ";
-        // line 7
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["desktop"]) || array_key_exists("desktop", $context) ? $context["desktop"] : (function () { throw new RuntimeError('Variable "desktop" does not exist.', 7, $this->source); })()), "name", [], "any", false, false, false, 7), "html", null, true);
-        echo "\" aria-label=\"Search\">
-            </form>
+        $this->displayBlock('stylsheets', $context, $blocks);
+        // line 11
+        echo "
 
-            <div class=\"\">
-            <div class=\"d-flex  pt-10 p-2 justify-content-lg-end\">
-             ";
-        // line 12
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", [], "any", false, false, false, 12)) {
-            // line 13
+
+<header class=\"pt-1 bg-warning text-white d-flex\">
+    <div class=\"justify-content-lg-end ml-5\">
+        <div class=\"d-flex flex-wrap align-items-center col\">
+
+            <div class= \"row mr-4 \">
+            
+        <div class=\"row justify-content-lg-end mr-0 row \">
+        <form>
+        
+        
+          <form class=\"row justify-content-lg-end mr-0 row  \">
+                <input type=\"text\" class=\"form-control \"  placeholder=\"Type de bureau\" aria-label=\"text\">
+            </form>
+          <form class=\" justify-content-lg-end \">
+                <input type=\"filter\" class=\"form-control \"  placeholder=\"surface / m²\" aria-label=\"filter\">
+            </form>
+            <form class=\" justify-content-lg-end  \">
+                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+            </form>
+            <p class=\"text-dark\">au</p>
+             <form class=\" justify-content-lg-end  \">
+                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+            </form>
+            <form class=\" justify-content-lg-end  \">
+                <input type=\"filter\" class=\"form-control \"  placeholder=\"nombre de personnes\" aria-label=\"filter\"> 
+            </form>
+        <form/>
+         
+          
+        </div>
+           
+           
+           
+            </div>
+            <div class=\"d-flex col p-3\">
+            <div class=\"d-flex justify-content-lg-end \">
+            <div class=\"row d-flex\">
+              ";
+        // line 51
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
+            // line 52
             echo "
-                    <p class=\"text-success\">";
-            // line 14
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14), "username", [], "any", false, false, false, 14), "html", null, true);
+                    <p class=\"col\">";
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "username", [], "any", false, false, false, 53), "html", null, true);
             echo " : ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "user", [], "any", false, false, false, 14), "status", [], "any", false, false, false, 14), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "status", [], "any", false, false, false, 53), "html", null, true);
             echo "</p>
-                    ";
-            // line 15
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", [], "any", false, false, false, 15), "status", [], "any", false, false, false, 15), "professionnel"))) {
-                // line 16
-                echo "                        <a href=\"";
+                   
+                    <div class=\"row\">
+                     ";
+            // line 56
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "user", [], "any", false, false, false, 56), "status", [], "any", false, false, false, 56), "professionnel"))) {
+                // line 57
+                echo "                         <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
+                echo "\" class=\"btn btn-outline-light \">Home</a>
+                        <a href=\"";
+                // line 58
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_new");
-                echo "\" class=\"btn btn-outline-light justify-content-lg-end\">Ajouter</a>
+                echo "\" class=\"btn btn-outline-light \">Ajouter</a>
+                    
+
                     ";
             }
-            // line 18
-            echo "                    <a class=\"btn btn-danger -m-5\" href=\"";
+            // line 62
+            echo "                     <a class=\"btn btn-danger mr-5\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
                 ";
         } else {
-            // line 20
-            echo "                    <a href=\"";
+            // line 64
+            echo "                <div class=\"px-10 col mr-4\">
+                <a href=\"";
+            // line 65
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\" class=\"btn btn-outline-light p-1  justify-content-lg-end\">Login</a>
+            echo "\" class=\"btn btn-outline-danger p-1 \">Login</a>
                     <a href=\"";
-            // line 21
+            // line 66
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\" class=\"btn btn-danger p-1 justify-content-lg-end\">Sign-up</a>
+            echo "\" class=\"btn btn-danger p-1 \">Sign-up</a></div>
+                    
                 ";
         }
-        // line 23
-        echo "            <div/>
+        // line 69
+        echo "                
+                </div>
+                   </div>
+           
+            <div/>
                
             </div>
         </div>
@@ -102,6 +146,34 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+    }
+
+    // line 1
+    public function block_stylsheets($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylsheets"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylsheets"));
+
+        // line 2
+        echo "<style>
+
+.nom{
+    backgound-color: red;
+}
+
+</style>
+
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
 
     }
 
@@ -117,33 +189,83 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     public function getDebugInfo()
     {
-        return array (  94 => 23,  89 => 21,  84 => 20,  78 => 18,  72 => 16,  70 => 15,  64 => 14,  61 => 13,  59 => 12,  51 => 7,  43 => 1,);
+        return array (  163 => 2,  153 => 1,  134 => 69,  128 => 66,  124 => 65,  121 => 64,  115 => 62,  108 => 58,  103 => 57,  101 => 56,  93 => 53,  90 => 52,  88 => 51,  46 => 11,  44 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header class=\"pt-1 bg-warning text-white d-flex\">
-    <div class=\"container \">
+        return new Source("{% block stylsheets %}
+<style>
+
+.nom{
+    backgound-color: red;
+}
+
+</style>
+
+{% endblock %}
+
+
+
+<header class=\"pt-1 bg-warning text-white d-flex\">
+    <div class=\"justify-content-lg-end ml-5\">
         <div class=\"d-flex flex-wrap align-items-center col\">
-       
-       
-            <form class=\"col-24 col-lg-auto mb-5 mb-lg-1 me-lg-5 justify-content-lg-end d-flex \">
-                <input type=\"search\" class=\"form-control form-control-dark\" placeholder=\"Search... {{desktop.name}}\" aria-label=\"Search\">
+
+            <div class= \"row mr-4 \">
+            
+        <div class=\"row justify-content-lg-end mr-0 row \">
+        <form>
+        
+        
+          <form class=\"row justify-content-lg-end mr-0 row  \">
+                <input type=\"text\" class=\"form-control \"  placeholder=\"Type de bureau\" aria-label=\"text\">
             </form>
+          <form class=\" justify-content-lg-end \">
+                <input type=\"filter\" class=\"form-control \"  placeholder=\"surface / m²\" aria-label=\"filter\">
+            </form>
+            <form class=\" justify-content-lg-end  \">
+                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+            </form>
+            <p class=\"text-dark\">au</p>
+             <form class=\" justify-content-lg-end  \">
+                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+            </form>
+            <form class=\" justify-content-lg-end  \">
+                <input type=\"filter\" class=\"form-control \"  placeholder=\"nombre de personnes\" aria-label=\"filter\"> 
+            </form>
+        <form/>
+         
+          
+        </div>
+           
+           
+           
+            </div>
+            <div class=\"d-flex col p-3\">
+            <div class=\"d-flex justify-content-lg-end \">
+            <div class=\"row d-flex\">
+              {% if app.user %}
 
-            <div class=\"\">
-            <div class=\"d-flex  pt-10 p-2 justify-content-lg-end\">
-             {% if app.user %}
+                    <p class=\"col\">{{ app.user.username }} : {{ app.user.status }}</p>
+                   
+                    <div class=\"row\">
+                     {% if app.user.status == 'professionnel' %}
+                         <a href=\"{{ path('app_home') }}\" class=\"btn btn-outline-light \">Home</a>
+                        <a href=\"{{ path('app_desktop_new') }}\" class=\"btn btn-outline-light \">Ajouter</a>
+                    
 
-                    <p class=\"text-success\">{{ app.user.username }} : {{ app.user.status }}</p>
-                    {% if app.user.status == 'professionnel' %}
-                        <a href=\"{{ path('app_desktop_new') }}\" class=\"btn btn-outline-light justify-content-lg-end\">Ajouter</a>
                     {% endif %}
-                    <a class=\"btn btn-danger -m-5\" href=\"{{ path('app_logout') }}\">Logout</a>
+                     <a class=\"btn btn-danger mr-5\" href=\"{{ path('app_logout') }}\">Logout</a>
                 {% else %}
-                    <a href=\"{{ path('app_login') }}\" class=\"btn btn-outline-light p-1  justify-content-lg-end\">Login</a>
-                    <a href=\"{{ path('app_register') }}\" class=\"btn btn-danger p-1 justify-content-lg-end\">Sign-up</a>
+                <div class=\"px-10 col mr-4\">
+                <a href=\"{{ path('app_login') }}\" class=\"btn btn-outline-danger p-1 \">Login</a>
+                    <a href=\"{{ path('app_register') }}\" class=\"btn btn-danger p-1 \">Sign-up</a></div>
+                    
                 {% endif %}
+                
+                </div>
+                   </div>
+           
             <div/>
                
             </div>
