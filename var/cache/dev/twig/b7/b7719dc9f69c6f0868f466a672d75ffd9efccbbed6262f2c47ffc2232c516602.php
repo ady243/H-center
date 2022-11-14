@@ -27,7 +27,6 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         $this->parent = false;
 
         $this->blocks = [
-            'stylsheets' => [$this, 'block_stylsheets'],
         ];
     }
 
@@ -41,39 +40,16 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "layouts/header.html.twig"));
 
         // line 1
-        $this->displayBlock('stylsheets', $context, $blocks);
-        // line 11
-        echo "
-
-
-<header class=\"pt-1 bg-warning text-white d-flex\">
+        echo "<header class=\"pt-1 bg-warning text-white d-flex\">
     <div class=\"justify-content-lg-end ml-5\">
         <div class=\"d-flex flex-wrap align-items-center col\">
 
             <div class= \"row mr-4 \">
             
         <div class=\"row justify-content-lg-end mr-0 row \">
-        <form>
-        
-        
-          <form class=\"row justify-content-lg-end mr-0 row  \">
-                <input type=\"text\" class=\"form-control \"  placeholder=\"Type de bureau\" aria-label=\"text\">
-            </form>
-          <form class=\" justify-content-lg-end \">
-                <input type=\"filter\" class=\"form-control \"  placeholder=\"surface / m²\" aria-label=\"filter\">
-            </form>
-            <form class=\" justify-content-lg-end  \">
-                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
-            </form>
-            <p class=\"text-dark\">au</p>
-             <form class=\" justify-content-lg-end  \">
-                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
-            </form>
-            <form class=\" justify-content-lg-end  \">
-                <input type=\"filter\" class=\"form-control \"  placeholder=\"nombre de personnes\" aria-label=\"filter\"> 
-            </form>
-        <form/>
-         
+        ";
+        // line 34
+        echo "         
           
         </div>
            
@@ -84,53 +60,53 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
             <div class=\"d-flex justify-content-lg-end \">
             <div class=\"row d-flex\">
               ";
-        // line 51
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 51, $this->source); })()), "user", [], "any", false, false, false, 51)) {
-            // line 52
+        // line 44
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44)) {
+            // line 45
             echo "
-                    <p class=\"col\">";
-            // line 53
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "username", [], "any", false, false, false, 53), "html", null, true);
+                    <p class=\"col text-primary\">";
+            // line 46
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "user", [], "any", false, false, false, 46), "username", [], "any", false, false, false, 46), "html", null, true);
             echo " : ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", [], "any", false, false, false, 53), "status", [], "any", false, false, false, 53), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "user", [], "any", false, false, false, 46), "status", [], "any", false, false, false, 46), "html", null, true);
             echo "</p>
                    
                     <div class=\"row\">
                      ";
-            // line 56
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 56, $this->source); })()), "user", [], "any", false, false, false, 56), "status", [], "any", false, false, false, 56), "professionnel"))) {
-                // line 57
+            // line 49
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 49, $this->source); })()), "user", [], "any", false, false, false, 49), "status", [], "any", false, false, false, 49), "professionnel"))) {
+                // line 50
                 echo "                         <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_home");
                 echo "\" class=\"btn btn-outline-light \">Home</a>
                         <a href=\"";
-                // line 58
+                // line 51
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_desktop_new");
                 echo "\" class=\"btn btn-outline-light \">Ajouter</a>
                     
 
                     ";
             }
-            // line 62
+            // line 55
             echo "                     <a class=\"btn btn-danger mr-5\" href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Logout</a>
                 ";
         } else {
-            // line 64
+            // line 57
             echo "                <div class=\"px-10 col mr-4\">
                 <a href=\"";
-            // line 65
+            // line 58
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\" class=\"btn btn-outline-danger p-1 \">Login</a>
+            echo "\" class=\"btn btn-outline-primary p-1 \">Login</a>
                     <a href=\"";
-            // line 66
+            // line 59
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\" class=\"btn btn-danger p-1 \">Sign-up</a></div>
                     
                 ";
         }
-        // line 69
+        // line 62
         echo "                
                 </div>
                    </div>
@@ -149,34 +125,6 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     }
 
-    // line 1
-    public function block_stylsheets($context, array $blocks = [])
-    {
-        $macros = $this->macros;
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylsheets"));
-
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "stylsheets"));
-
-        // line 2
-        echo "<style>
-
-.nom{
-    backgound-color: red;
-}
-
-</style>
-
-";
-        
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
-
-        
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
-
-    }
-
     public function getTemplateName()
     {
         return "layouts/header.html.twig";
@@ -189,51 +137,44 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     public function getDebugInfo()
     {
-        return array (  163 => 2,  153 => 1,  134 => 69,  128 => 66,  124 => 65,  121 => 64,  115 => 62,  108 => 58,  103 => 57,  101 => 56,  93 => 53,  90 => 52,  88 => 51,  46 => 11,  44 => 1,);
+        return array (  110 => 62,  104 => 59,  100 => 58,  97 => 57,  91 => 55,  84 => 51,  79 => 50,  77 => 49,  69 => 46,  66 => 45,  64 => 44,  52 => 34,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% block stylsheets %}
-<style>
-
-.nom{
-    backgound-color: red;
-}
-
-</style>
-
-{% endblock %}
-
-
-
-<header class=\"pt-1 bg-warning text-white d-flex\">
+        return new Source("<header class=\"pt-1 bg-warning text-white d-flex\">
     <div class=\"justify-content-lg-end ml-5\">
         <div class=\"d-flex flex-wrap align-items-center col\">
 
             <div class= \"row mr-4 \">
             
         <div class=\"row justify-content-lg-end mr-0 row \">
-        <form>
+        {# <form>
         
         
           <form class=\"row justify-content-lg-end mr-0 row  \">
                 <input type=\"text\" class=\"form-control \"  placeholder=\"Type de bureau\" aria-label=\"text\">
             </form>
-          <form class=\" justify-content-lg-end \">
+          <form class=\" justify-content-lg-end mr-0 \">
                 <input type=\"filter\" class=\"form-control \"  placeholder=\"surface / m²\" aria-label=\"filter\">
             </form>
-            <form class=\" justify-content-lg-end  \">
-                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+            <form class=\" justify-content-lg-end mr-0 \">
+                <input type=\"date\" class=\"form-control \"  aria-label=\"filter\"> 
             </form>
             <p class=\"text-dark\">au</p>
-             <form class=\" justify-content-lg-end  \">
-                <input type=\"date\" class=\"form-control \"  placeholder=\"Du\" aria-label=\"filter\"> 
+             <form class=\" justify-content-lg-end mr-0 \">
+                <input type=\"date\" class=\"form-control \"  aria-label=\"filter\"> 
             </form>
-            <form class=\" justify-content-lg-end  \">
+            <form class=\" justify-content-lg-end mr-0 \">
                 <input type=\"filter\" class=\"form-control \"  placeholder=\"nombre de personnes\" aria-label=\"filter\"> 
             </form>
-        <form/>
+            <form class=\" justify-content-lg-end  \">
+                <input type=\"number\" class=\"form-control \"  placeholder=\"Budget €\" aria-label=\"filter\"> 
+            </form>
+             <button class=\"justify-content-lg-end ml-3 bg-white btn-outline-light text-dark \" type=\"submit\">
+           Chercher
+            </button>
+        <form/> #}
          
           
         </div>
@@ -246,7 +187,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
             <div class=\"row d-flex\">
               {% if app.user %}
 
-                    <p class=\"col\">{{ app.user.username }} : {{ app.user.status }}</p>
+                    <p class=\"col text-primary\">{{ app.user.username }} : {{ app.user.status }}</p>
                    
                     <div class=\"row\">
                      {% if app.user.status == 'professionnel' %}
@@ -258,7 +199,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
                      <a class=\"btn btn-danger mr-5\" href=\"{{ path('app_logout') }}\">Logout</a>
                 {% else %}
                 <div class=\"px-10 col mr-4\">
-                <a href=\"{{ path('app_login') }}\" class=\"btn btn-outline-danger p-1 \">Login</a>
+                <a href=\"{{ path('app_login') }}\" class=\"btn btn-outline-primary p-1 \">Login</a>
                     <a href=\"{{ path('app_register') }}\" class=\"btn btn-danger p-1 \">Sign-up</a></div>
                     
                 {% endif %}

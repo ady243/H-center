@@ -95,7 +95,7 @@
 
                         <div class="form-group mb-2">
                             {{ form_label(registrationForm.address) }}
-                            {{ form_widget(registrationForm.address, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_widget(registrationForm.address, {'attr': {'class': 'form-control '}}) }}
                             <span class="text-danger">
                                 {{ form_errors(registrationForm.address) }}
                             </span>
@@ -126,14 +126,6 @@
                         </div>
 
 
-                        <div class="form-group mb-2 d-none">
-                            {{ form_label(registrationForm.legalStatus) }}
-                            {{ form_widget(registrationForm.legalStatus, {'attr': {'class': 'form-control'}}) }}
-                            <span class="text-danger">
-                                {{ form_errors(registrationForm.legalStatus) }}
-                            </span>
-                        </div>
-
                         <button type="submit" class="btn btn-warning btn-block">S'inscrire</button>
 
 
@@ -149,6 +141,7 @@
 
 
 {% block javascripts %}
+    <script src="https://maps.googleapis.com/maps/api/js?v-3.exp&libraries=places&key={{ app.request.server.get('GOOGLE_MAP_API_KEY') }}"></script>
     <script>
 
         function handleRequiredFields(value){
@@ -158,6 +151,12 @@
         }
 
         $(document).ready(function () {
+            // Auto complete address field
+            var autocomplete;
+            var address = document.getElementById('registration_form_address');
+            autocomplete = new google.maps.places.Autocomplete(address);
+
+
             let status = $('#registration_form_status').val();
 
             if ( status === 'professionnel') {
@@ -178,24 +177,23 @@
                 }
             });
         });
+
+
+
+        $(document).ready(function() {
+            $("#show_hide_password a").on('click', function(event) {
+                event.preventDefault();
+                if($('#show_hide_password input').attr("type") == "text"){
+                    $('#show_hide_password input').attr('type', 'password');
+                    $('#show_hide_password i').addClass( "fa-eye-slash" );
+                    $('#show_hide_password i').removeClass( "fa-eye" );
+                }else if($('#show_hide_password input').attr("type") == "password"){
+                    $('#show_hide_password input').attr('type', 'text');
+                    $('#show_hide_password i').removeClass( "fa-eye-slash" );
+                    $('#show_hide_password i').addClass( "fa-eye" );
+                }
+            });
+        });
     </script>
-    {#    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script> #}
-    {#    <script> #}
-    {#        jQuery(document).ready(function() { #}
-    {#            $('.js-datepicker').datepicker(); #}
-    {#        }); #}
-    {#    </script> #}
-    {#    <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.js"></script> #}
-    {#    <script> #}
-    {#        $(document).ready(function() { #}
-    {#            $('#registration_form_birthDate').datepicker({ #}
-    {#                format: 'dd/mm/yyyy', #}
-    {#                language: 'fr', #}
-    {#                autoclose: true, #}
-    {#                todayHighlight: true, #}
-    {#                startDate: '-100y', #}
-    {#                endDate: '-18y' #}
-    {#            }); #}
-    {#        }); #}
-    {#    </script> #}
+
 {% endblock %}

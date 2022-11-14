@@ -287,7 +287,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
         echo "
                             ";
         // line 98
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 98, $this->source); })()), "address", [], "any", false, false, false, 98), 'widget', ["attr" => ["class" => "form-control"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 98, $this->source); })()), "address", [], "any", false, false, false, 98), 'widget', ["attr" => ["class" => "form-control "]]);
         echo "
                             <span class=\"text-danger\">
                                 ";
@@ -343,29 +343,12 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                         </div>
 
 
-                        <div class=\"form-group mb-2 d-none\">
-                            ";
-        // line 130
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 130, $this->source); })()), "legalStatus", [], "any", false, false, false, 130), 'label');
-        echo "
-                            ";
-        // line 131
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 131, $this->source); })()), "legalStatus", [], "any", false, false, false, 131), 'widget', ["attr" => ["class" => "form-control"]]);
-        echo "
-                            <span class=\"text-danger\">
-                                ";
-        // line 133
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 133, $this->source); })()), "legalStatus", [], "any", false, false, false, 133), 'errors');
-        echo "
-                            </span>
-                        </div>
-
                         <button type=\"submit\" class=\"btn btn-warning btn-block\">S'inscrire</button>
 
 
                         ";
-        // line 140
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 140, $this->source); })()), 'form_end');
+        // line 132
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 132, $this->source); })()), 'form_end');
         echo "
                     </div>
                 </div>
@@ -383,7 +366,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
 
     }
 
-    // line 151
+    // line 143
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -393,8 +376,11 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 152
-        echo "    <script>
+        // line 144
+        echo "    <script src=\"https://maps.googleapis.com/maps/api/js?v-3.exp&libraries=places&key=";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 144, $this->source); })()), "request", [], "any", false, false, false, 144), "server", [], "any", false, false, false, 144), "get", [0 => "GOOGLE_MAP_API_KEY"], "method", false, false, false, 144), "html", null, true);
+        echo "\"></script>
+    <script>
 
         function handleRequiredFields(value){
             \$('#registration_form_siret').attr('required', value);
@@ -403,6 +389,12 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
         }
 
         \$(document).ready(function () {
+            // Auto complete address field
+            var autocomplete;
+            var address = document.getElementById('registration_form_address');
+            autocomplete = new google.maps.places.Autocomplete(address);
+
+
             let status = \$('#registration_form_status').val();
 
             if ( status === 'professionnel') {
@@ -423,44 +415,26 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                 }
             });
         });
+
+
+
+        \$(document).ready(function() {
+            \$(\"#show_hide_password a\").on('click', function(event) {
+                event.preventDefault();
+                if(\$('#show_hide_password input').attr(\"type\") == \"text\"){
+                    \$('#show_hide_password input').attr('type', 'password');
+                    \$('#show_hide_password i').addClass( \"fa-eye-slash\" );
+                    \$('#show_hide_password i').removeClass( \"fa-eye\" );
+                }else if(\$('#show_hide_password input').attr(\"type\") == \"password\"){
+                    \$('#show_hide_password input').attr('type', 'text');
+                    \$('#show_hide_password i').removeClass( \"fa-eye-slash\" );
+                    \$('#show_hide_password i').addClass( \"fa-eye\" );
+                }
+            });
+        });
     </script>
-    ";
-        // line 183
-        echo "    ";
-        // line 184
-        echo "    ";
-        // line 185
-        echo "    ";
-        // line 186
-        echo "    ";
-        // line 187
-        echo "    ";
-        // line 188
-        echo "    ";
-        // line 189
-        echo "    ";
-        // line 190
-        echo "    ";
-        // line 191
-        echo "    ";
-        // line 192
-        echo "    ";
-        // line 193
-        echo "    ";
-        // line 194
-        echo "    ";
-        // line 195
-        echo "    ";
-        // line 196
-        echo "    ";
-        // line 197
-        echo "    ";
-        // line 198
-        echo "    ";
-        // line 199
-        echo "    ";
-        // line 200
-        echo "    ";
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -481,7 +455,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
 
     public function getDebugInfo()
     {
-        return array (  463 => 200,  461 => 199,  459 => 198,  457 => 197,  455 => 196,  453 => 195,  451 => 194,  449 => 193,  447 => 192,  445 => 191,  443 => 190,  441 => 189,  439 => 188,  437 => 187,  435 => 186,  433 => 185,  431 => 184,  429 => 183,  397 => 152,  387 => 151,  368 => 140,  358 => 133,  353 => 131,  349 => 130,  338 => 122,  330 => 117,  325 => 115,  321 => 114,  312 => 108,  307 => 106,  303 => 105,  295 => 100,  290 => 98,  286 => 97,  277 => 91,  272 => 89,  268 => 88,  260 => 83,  255 => 81,  251 => 80,  243 => 75,  238 => 73,  234 => 72,  225 => 66,  220 => 64,  216 => 63,  207 => 57,  202 => 55,  198 => 54,  190 => 49,  185 => 47,  181 => 46,  171 => 39,  166 => 37,  162 => 36,  154 => 31,  149 => 29,  145 => 28,  138 => 24,  135 => 23,  126 => 21,  122 => 20,  110 => 10,  100 => 9,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
+        return array (  380 => 144,  370 => 143,  351 => 132,  338 => 122,  330 => 117,  325 => 115,  321 => 114,  312 => 108,  307 => 106,  303 => 105,  295 => 100,  290 => 98,  286 => 97,  277 => 91,  272 => 89,  268 => 88,  260 => 83,  255 => 81,  251 => 80,  243 => 75,  238 => 73,  234 => 72,  225 => 66,  220 => 64,  216 => 63,  207 => 57,  202 => 55,  198 => 54,  190 => 49,  185 => 47,  181 => 46,  171 => 39,  166 => 37,  162 => 36,  154 => 31,  149 => 29,  145 => 28,  138 => 24,  135 => 23,  126 => 21,  122 => 20,  110 => 10,  100 => 9,  90 => 6,  80 => 5,  61 => 3,  38 => 1,);
     }
 
     public function getSourceContext()
@@ -583,7 +557,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
 
                         <div class=\"form-group mb-2\">
                             {{ form_label(registrationForm.address) }}
-                            {{ form_widget(registrationForm.address, {'attr': {'class': 'form-control'}}) }}
+                            {{ form_widget(registrationForm.address, {'attr': {'class': 'form-control '}}) }}
                             <span class=\"text-danger\">
                                 {{ form_errors(registrationForm.address) }}
                             </span>
@@ -614,14 +588,6 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                         </div>
 
 
-                        <div class=\"form-group mb-2 d-none\">
-                            {{ form_label(registrationForm.legalStatus) }}
-                            {{ form_widget(registrationForm.legalStatus, {'attr': {'class': 'form-control'}}) }}
-                            <span class=\"text-danger\">
-                                {{ form_errors(registrationForm.legalStatus) }}
-                            </span>
-                        </div>
-
                         <button type=\"submit\" class=\"btn btn-warning btn-block\">S'inscrire</button>
 
 
@@ -637,6 +603,7 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
 
 
 {% block javascripts %}
+    <script src=\"https://maps.googleapis.com/maps/api/js?v-3.exp&libraries=places&key={{ app.request.server.get('GOOGLE_MAP_API_KEY') }}\"></script>
     <script>
 
         function handleRequiredFields(value){
@@ -646,6 +613,12 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
         }
 
         \$(document).ready(function () {
+            // Auto complete address field
+            var autocomplete;
+            var address = document.getElementById('registration_form_address');
+            autocomplete = new google.maps.places.Autocomplete(address);
+
+
             let status = \$('#registration_form_status').val();
 
             if ( status === 'professionnel') {
@@ -666,26 +639,25 @@ class __TwigTemplate_98f9e7757d266c44b7dcca9d0ee668f11281ceb21b96bb2bec4622d6151
                 }
             });
         });
+
+
+
+        \$(document).ready(function() {
+            \$(\"#show_hide_password a\").on('click', function(event) {
+                event.preventDefault();
+                if(\$('#show_hide_password input').attr(\"type\") == \"text\"){
+                    \$('#show_hide_password input').attr('type', 'password');
+                    \$('#show_hide_password i').addClass( \"fa-eye-slash\" );
+                    \$('#show_hide_password i').removeClass( \"fa-eye\" );
+                }else if(\$('#show_hide_password input').attr(\"type\") == \"password\"){
+                    \$('#show_hide_password input').attr('type', 'text');
+                    \$('#show_hide_password i').removeClass( \"fa-eye-slash\" );
+                    \$('#show_hide_password i').addClass( \"fa-eye\" );
+                }
+            });
+        });
     </script>
-    {#    <script src=\"//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js\"></script> #}
-    {#    <script> #}
-    {#        jQuery(document).ready(function() { #}
-    {#            \$('.js-datepicker').datepicker(); #}
-    {#        }); #}
-    {#    </script> #}
-    {#    <script src=\"//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.js\"></script> #}
-    {#    <script> #}
-    {#        \$(document).ready(function() { #}
-    {#            \$('#registration_form_birthDate').datepicker({ #}
-    {#                format: 'dd/mm/yyyy', #}
-    {#                language: 'fr', #}
-    {#                autoclose: true, #}
-    {#                todayHighlight: true, #}
-    {#                startDate: '-100y', #}
-    {#                endDate: '-18y' #}
-    {#            }); #}
-    {#        }); #}
-    {#    </script> #}
+
 {% endblock %}", "registration/register.html.twig", "C:\\Users\\masiv\\hcenter\\h-center-ady\\templates\\registration\\register.html.twig");
     }
 }

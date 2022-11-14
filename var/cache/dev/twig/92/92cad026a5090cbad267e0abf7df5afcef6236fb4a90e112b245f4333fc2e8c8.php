@@ -112,8 +112,8 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
     ";
         }
         // line 16
-        echo "<div class=\"mt-5 m-5 px-5 p-5\">
- <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+        echo "
+    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"";
         // line 19
@@ -132,13 +132,10 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
     ";
         // line 37
         echo "
-    <button class=\"btn btn-lg btn-warning mt-5\" type=\"submit\">
+    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in
     </button>
 </form>
-
-</div>
-   
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -180,8 +177,8 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
             You are logged in as {{ app.user.username }}, <a href=\"{{ path('app_logout') }}\">Logout</a>
         </div>
     {% endif %}
-<div class=\"mt-5 m-5 px-5 p-5\">
- <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
+
+    <h1 class=\"h3 mb-3 font-weight-normal\">Please sign in</h1>
     <label for=\"inputEmail\">Email</label>
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
     <label for=\"inputPassword\">Password</label>
@@ -202,14 +199,10 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
         </div>
     #}
 
-    <button class=\"btn btn-lg btn-warning mt-5\" type=\"submit\">
+    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Sign in
     </button>
 </form>
-
-</div>
-   
-{% endblock %}
-", "security/login.html.twig", "C:\\Users\\masiv\\hcenter\\h-center-ady\\templates\\security\\login.html.twig");
+{% endblock %}", "security/login.html.twig", "C:\\Users\\masiv\\hcenter\\h-center-ady\\templates\\security\\login.html.twig");
     }
 }

@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* template.html.twig */
+/* ./template.html.twig */
 class __TwigTemplate_c3d68de64f6edfb8a5290cabfd10c2dc9a58a253ab09c2b593de6256a6499fc7 extends Template
 {
     private $source;
@@ -39,10 +39,10 @@ class __TwigTemplate_c3d68de64f6edfb8a5290cabfd10c2dc9a58a253ab09c2b593de6256a64
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "template.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "./template.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "template.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "./template.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -72,7 +72,7 @@ class __TwigTemplate_c3d68de64f6edfb8a5290cabfd10c2dc9a58a253ab09c2b593de6256a64
     <body>
         ";
         // line 22
-        $this->loadTemplate("layouts/header.html.twig", "template.html.twig", 22)->display($context);
+        $this->loadTemplate("layouts/header.html.twig", "./template.html.twig", 22)->display($context);
         // line 23
         echo "
         ";
@@ -202,7 +202,7 @@ class __TwigTemplate_c3d68de64f6edfb8a5290cabfd10c2dc9a58a253ab09c2b593de6256a64
 
     public function getTemplateName()
     {
-        return "template.html.twig";
+        return "./template.html.twig";
     }
 
     public function isTraitable()
@@ -250,6 +250,6 @@ class __TwigTemplate_c3d68de64f6edfb8a5290cabfd10c2dc9a58a253ab09c2b593de6256a64
         {% endblock %}
     </body>
 </html>
-", "template.html.twig", "C:\\Users\\masiv\\hcenter\\h-center-ady\\templates\\template.html.twig");
+", "./template.html.twig", "C:\\Users\\masiv\\hcenter\\h-center-ady\\templates\\template.html.twig");
     }
 }
