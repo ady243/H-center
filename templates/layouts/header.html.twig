@@ -7,10 +7,9 @@
         <div class="row justify-content-lg-end mr-0 row ">
 
 
+        {# L'idée du design pour la partie filter #}
         
-        {# <form>
-        
-        
+         <form class="row justify-content-lg-end mr-0 row  ">
           <form class="row justify-content-lg-end mr-0 row  ">
                 <input type="text" class="form-control "  placeholder="Type de bureau" aria-label="text">
             </form>
@@ -33,7 +32,8 @@
              <button class="justify-content-lg-end ml-3 bg-white btn-outline-light text-dark " type="submit">
            Chercher
             </button>
-        <form/> #}
+</form>
+         
          
           
         </div>
@@ -45,24 +45,22 @@
             <div class="d-flex justify-content-lg-end ">
             <div class="row d-flex">
               {% if app.user %}
-
-                    <p class="col text-primary">{{ app.user.username }} : {{ app.user.status }}</p>
-                   
+   
                     <div class="row">
+                            
                      {% if app.user.status == 'professionnel' %}
-                         <a href="{{ path('app_home') }}" class="btn btn-outline-light ">Home</a>
-                        <a href="{{ path('app_desktop_new') }}" class="btn btn-outline-light ">Ajouter</a>
-                    
+                         <a href="{{ path('app_home') }}" class="btn btn-outline-light p-1 mr-1">Home</a>
+                        <a href="{{ path('app_desktop_new') }}" class="btn btn-outline-light p-1 mr-1 ">Ajouter</a>      
 
                     {% endif %}
-                     <a class="btn btn-danger mr-5" href="{{ path('app_logout') }}">Logout</a>
+                     <a class="btn btn-danger mr-1" href="{{ path('app_logout') }}">Logout</a>
                 {% else %}
-                <div class="px-10 col mr-4">
+                <div class="px-4 col mr-4">
                 <a href="{{ path('app_login') }}" class="btn btn-outline-primary p-1 ">Login</a>
                     <a href="{{ path('app_register') }}" class="btn btn-danger p-1 ">Sign-up</a></div>
                     
                 {% endif %}
-                
+                <p class="row text-primary px-4 d-blok">{{ app.user.username }} : {{ app.user.status }}</p>
                 </div>
                    </div>
            

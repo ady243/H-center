@@ -112,45 +112,54 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
         // line 15
         echo "
+";
+        // line 17
+        echo "
+";
+        // line 24
+        echo "
+</div>
+
+
     <div class=\"container\">
 
         <div class=\"row mt-4 p-1 pt-4 col-xxl-1\">
             ";
-        // line 19
+        // line 31
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["desktops"]) || array_key_exists("desktops", $context) ? $context["desktops"] : (function () { throw new RuntimeError('Variable "desktops" does not exist.', 19, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["desktops"]) || array_key_exists("desktops", $context) ? $context["desktops"] : (function () { throw new RuntimeError('Variable "desktops" does not exist.', 31, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["desktop"]) {
-            // line 20
+            // line 32
             echo "
                 <div class=\"row p-4 col-4 pt-50 me-5\">
                     <div class=\"card shadow\">
                     
                         <div class=\"card-title p-3 text-center\">
                             <h3>";
-            // line 25
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "name", [], "any", false, false, false, 25), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "name", [], "any", false, false, false, 37), "html", null, true);
             echo "</h3>
                         </div>
                         ";
-            // line 27
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "image", [], "any", false, false, false, 27), "html", null, true);
+            // line 39
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "image", [], "any", false, false, false, 39), "html", null, true);
             echo "
                         <div class=\"card-body p-3 text-center\">
                             <h4> ";
-            // line 29
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 29), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "price", [], "any", false, false, false, 41), "html", null, true);
             echo " €/mois</h4>
                             ";
-            // line 30
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 30), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "surface", [], "any", false, false, false, 42), "html", null, true);
             echo " m² : 
                             ";
-            // line 31
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateStart", [], "any", false, false, false, 31), "d/m/Y"), "html", null, true);
+            // line 43
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateStart", [], "any", false, false, false, 43), "d/m/Y"), "html", null, true);
             echo " au 
                             ";
-            // line 32
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 32), "d/m/Y"), "html", null, true);
+            // line 44
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["desktop"], "dateEnd", [], "any", false, false, false, 44), "d/m/Y"), "html", null, true);
             echo "
                             
                         </div>
@@ -162,7 +171,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['desktop'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 39
+        // line 51
         echo "        </div>
 
 
@@ -189,7 +198,7 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
     public function getDebugInfo()
     {
-        return array (  166 => 39,  153 => 32,  149 => 31,  145 => 30,  141 => 29,  136 => 27,  131 => 25,  124 => 20,  120 => 19,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
+        return array (  175 => 51,  162 => 44,  158 => 43,  154 => 42,  150 => 41,  145 => 39,  140 => 37,  133 => 32,  129 => 31,  120 => 24,  117 => 17,  114 => 15,  104 => 14,  89 => 6,  79 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -208,6 +217,18 @@ class __TwigTemplate_513f0cefd3fc81ef56c8f6597d9bbe7ae3bb73244744aa764b75662617b
 
 
 {% block body %}
+
+{# Por le filte qui va faire appel à la base de données  #}
+
+{# <div class=\"jumbotron\">
+
+        <div class=\"container\">
+      {{form_start(form)}}
+      {{form_end(form)}}
+ </div> #}
+
+</div>
+
 
     <div class=\"container\">
 

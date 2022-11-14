@@ -18,15 +18,15 @@ class HomeController extends AbstractController
     public function index( DesktopRepository $desktopRepository ): Response
     {
 
-        $search = new PropertySearch();
-        $form = $this->createForm(PropertySearchType::class, $search);
-        $form->handleRequest($_REQUEST);
+        // $search = new PropertySearch();
+        // $form = $this->createForm(PropertySearchType::class, $search);
+        // $form->handleRequest($_REQUEST);
 
 
 
         return $this->render('home/index.html.twig', [
             'desktops' => $desktopRepository->findAll(),
-            'form' =>$form->createView()
+            // 'form' =>$form->createView()
            
         ]);
     }
