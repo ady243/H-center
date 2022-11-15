@@ -91,7 +91,11 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
         // line 47
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 47, $this->source); })()), "user", [], "any", false, false, false, 47)) {
             // line 48
-            echo "   
+            echo "    <p class=\"row text-primary px-4 d-blok\">";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "username", [], "any", false, false, false, 48), "html", null, true);
+            echo " : ";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 48, $this->source); })()), "user", [], "any", false, false, false, 48), "status", [], "any", false, false, false, 48), "html", null, true);
+            echo "</p>
                     <div class=\"row\">
                             
                      ";
@@ -128,11 +132,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
                 ";
         }
         // line 63
-        echo "                <p class=\"row text-primary px-4 d-blok\">";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", [], "any", false, false, false, 63), "username", [], "any", false, false, false, 63), "html", null, true);
-        echo " : ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", [], "any", false, false, false, 63), "status", [], "any", false, false, false, 63), "html", null, true);
-        echo "</p>
+        echo "               
                 </div>
                    </div>
            
@@ -162,7 +162,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
 
     public function getDebugInfo()
     {
-        return array (  131 => 63,  125 => 60,  121 => 59,  118 => 58,  112 => 56,  106 => 53,  101 => 52,  99 => 51,  94 => 48,  92 => 47,  54 => 11,  43 => 1,);
+        return array (  135 => 63,  129 => 60,  125 => 59,  122 => 58,  116 => 56,  110 => 53,  105 => 52,  103 => 51,  94 => 48,  92 => 47,  54 => 11,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -214,7 +214,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
             <div class=\"d-flex justify-content-lg-end \">
             <div class=\"row d-flex\">
               {% if app.user %}
-   
+    <p class=\"row text-primary px-4 d-blok\">{{ app.user.username }} : {{ app.user.status }}</p>
                     <div class=\"row\">
                             
                      {% if app.user.status == 'professionnel' %}
@@ -229,7 +229,7 @@ class __TwigTemplate_11d656dee678bb14145af73e6f3267b1ef9ccdc32793720e5aab9c2443e
                     <a href=\"{{ path('app_register') }}\" class=\"btn btn-danger p-1 \">Sign-up</a></div>
                     
                 {% endif %}
-                <p class=\"row text-primary px-4 d-blok\">{{ app.user.username }} : {{ app.user.status }}</p>
+               
                 </div>
                    </div>
            

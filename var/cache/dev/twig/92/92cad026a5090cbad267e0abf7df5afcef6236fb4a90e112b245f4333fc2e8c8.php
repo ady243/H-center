@@ -85,7 +85,7 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        echo "<form method=\"post\">
+        echo "<form class=\"container p-5 card d-flex\" method=\"post\">
     ";
         // line 7
         if ((isset($context["error"]) || array_key_exists("error", $context) ? $context["error"] : (function () { throw new RuntimeError('Variable "error" does not exist.', 7, $this->source); })())) {
@@ -132,7 +132,7 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
     ";
         // line 37
         echo "
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+    <button class=\"btn btn-lg btn-primary mt-4\" type=\"submit\">
         Sign in
     </button>
 </form>
@@ -167,7 +167,7 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
 {% block title %}Log in!{% endblock %}
 
 {% block body %}
-<form method=\"post\">
+<form class=\"container p-5 card d-flex\" method=\"post\">
     {% if error %}
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -199,7 +199,7 @@ class __TwigTemplate_60e70094a4923b06faabae4af1aae7f3a856cfe861c9c7b8ba9fbe7723c
         </div>
     #}
 
-    <button class=\"btn btn-lg btn-primary\" type=\"submit\">
+    <button class=\"btn btn-lg btn-primary mt-4\" type=\"submit\">
         Sign in
     </button>
 </form>
